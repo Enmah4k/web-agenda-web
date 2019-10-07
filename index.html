@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="shortcut icon" href="./res/img/agenda.png" type="image/x-icon">
+    <link rel="stylesheet" href="./res/css/style.css">
+    <title>Agenda</title>
+</head>
+<body>
+    <div class="cont">
+        <div class="container">
+            <div class="main">
+                <div class="contacts" id="contacts">
+
+                </div>
+                <div class="father">
+                    <a href="#popup1">
+                        <div class="btn">
+                            <span>+</span>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="popup1" class="overlay">
+        <div class="popup">
+            <h2>Add the new contact</h2>
+            <a class="close" href="#">&times;</a>
+            <div class="content">
+                <input type="text" class="input" id="name" placeholder="Name" required>
+                <input type="text" class="input" id="lastname" placeholder="Lastname" required>
+                <input type="text" class="input" id="phone" placeholder="Phone" required>
+                <div class="button" onclick="guardarEnAgenda()">
+                    <span>Save</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="./res/js/main.js"></script>
+</body>
+</html>

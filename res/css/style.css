@@ -1,0 +1,219 @@
+@import url("https://fonts.googleapis.com/css?family=Ubuntu&display=swap");
+* {
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  color: white;
+  font-family: 'Ubuntu', sans-serif;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  text-decoration: none;
+}
+
+html, body {
+  height: 100%;
+  width: 100%;
+  padding: 0;
+  margin: 0;
+  background: #969696;
+}
+
+html .cont, body .cont {
+  -webkit-box-shadow: 10vmin -5vmin 4vmin black;
+          box-shadow: 10vmin -5vmin 4vmin black;
+  background: #000;
+  width: auto;
+  height: auto;
+}
+
+.container {
+  width: 80%;
+  height: 90%;
+  background: #222222;
+  border-radius: 4vmin;
+  display: -ms-grid;
+  display: grid;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  -webkit-box-shadow: inset 1vmin -1vmin 0 rgba(0, 0, 0, 0.2);
+          box-shadow: inset 1vmin -1vmin 0 rgba(0, 0, 0, 0.2);
+}
+
+.container .main {
+  border-radius: 2vmin;
+  margin: 4vmin;
+  margin-top: 2vmin;
+  margin-bottom: 15vmin;
+  overflow: auto;
+  background: #141414;
+}
+
+.container .main::-webkit-scrollbar {
+  width: 0px;
+  background: transparent;
+}
+
+.container .main .contacts {
+  border-radius: 2vmin;
+  padding: 4vmin;
+}
+
+.container .main .contacts .contact-card {
+  padding: 4vmin;
+  background: #141414;
+  margin-bottom: 2vmin;
+  border-radius: 2vmin;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 100%;
+      grid-template-columns: 100%;
+  -ms-grid-rows: 50% 50%;
+      grid-template-rows: 50% 50%;
+  min-height: 12vmin;
+  -webkit-box-shadow: inset 1vmin -1vmin 0 rgba(0, 0, 0, 0.2);
+          box-shadow: inset 1vmin -1vmin 0 rgba(0, 0, 0, 0.2);
+}
+
+.container .main .contacts .contact-card .c-name {
+  font-size: 4vmin;
+  font-weight: bold;
+  margin-bottom: 1vmin;
+  text-transform: capitalize;
+}
+
+.container .main .contacts .contact-card .c-number {
+  font-size: 2vmin;
+  font-weight: normal;
+  margin-top: 1vmin;
+}
+
+.container .main .father {
+  height: 10vmin;
+  width: 10vmin;
+  position: absolute;
+  bottom: 3vh;
+  left: 50%;
+  -webkit-transform: translate(-50%);
+          transform: translate(-50%);
+  border-radius: 25vmin;
+  background: rgba(0, 0, 0, 0.2);
+  padding: 1vmin;
+}
+
+.container .main .father .btn {
+  height: 8vmin;
+  width: 8vmin;
+  background: #2ba50f;
+  border-radius: 25vmin;
+  text-align: center;
+  -webkit-transition: 1s;
+  transition: 1s;
+}
+
+.container .main .father .btn:hover {
+  -webkit-transform: rotate(360deg);
+          transform: rotate(360deg);
+}
+
+.container .main .father .btn span {
+  font-weight: bold;
+  font-size: 6vmin;
+  text-align: center;
+}
+
+.overlay {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: rgba(0, 0, 0, 0.7);
+  -webkit-transition: opacity 500ms;
+  transition: opacity 500ms;
+  visibility: hidden;
+  opacity: 0;
+}
+
+.overlay:target {
+  visibility: visible;
+  opacity: 1;
+}
+
+.popup {
+  margin: 12vmin auto;
+  padding: 4vmin;
+  background: #fff;
+  border-radius: 2vmin;
+  width: 60vmin;
+  position: relative;
+  -webkit-transition: all 1s ease-in-out;
+  transition: all 1s ease-in-out;
+  -webkit-box-shadow: inset 0.8vmin -0.8vmin 0 rgba(0, 0, 0, 0.2);
+          box-shadow: inset 0.8vmin -0.8vmin 0 rgba(0, 0, 0, 0.2);
+}
+
+.popup h2 {
+  margin-top: 0;
+  color: #222222;
+}
+
+.popup .close {
+  position: absolute;
+  top: 3.45vmin;
+  right: 5.45vmin;
+  -webkit-transition: all 200ms;
+  transition: all 200ms;
+  font-size: 4vmin;
+  font-weight: bold;
+  color: #222222;
+  -webkit-transition: 1s;
+  transition: 1s;
+}
+
+.popup .close:hover {
+  -webkit-transform: rotate(360deg);
+          transform: rotate(360deg);
+  color: #06D85F;
+}
+
+.popup .content {
+  max-height: 30%;
+  overflow: auto;
+}
+
+.content .input {
+  color: #222222;
+  font-size: 2vmin;
+  width: 100%;
+  border-radius: 2vmin;
+  margin-bottom: 2vmin;
+  padding: 2vmin;
+  border: 0;
+  -webkit-box-shadow: inset -0.8vmin 0.8vmin 0 rgba(0, 0, 0, 0.2);
+          box-shadow: inset -0.8vmin 0.8vmin 0 rgba(0, 0, 0, 0.2);
+  background: #cccccc;
+}
+
+.content .button {
+  background: #06d85f;
+  padding: 2vmin;
+  text-align: center;
+  border-radius: 2vmin;
+  margin-top: 2vmin;
+  margin-left: auto;
+  margin-right: auto;
+  -webkit-box-shadow: inset 0.8vmin -0.8vmin 0 rgba(0, 0, 0, 0.2);
+          box-shadow: inset 0.8vmin -0.8vmin 0 rgba(0, 0, 0, 0.2);
+  width: 80%;
+  border: 0;
+}
+
+.content .button span {
+  color: #222222;
+  font-weight: bold;
+}
+/*# sourceMappingURL=style.css.map */
